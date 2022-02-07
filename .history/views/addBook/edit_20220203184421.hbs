@@ -1,0 +1,40 @@
+<div class="edit_wrapper">
+    <div class="edit_form_wrapper">
+        <h2 class="edit_title">Edit "{{book.title}}" book:</h2>
+        <form action="/book/{{book.id}}?_method=PATCH" method="POST" class="edit_form">
+            <div class="form_line">
+                <label for="title" class="form_label">
+                    Title
+                    <input id="title" class="form_input" name="title" type="text" value="{{book.title}}">
+                </label>
+            </div>
+            <div class="form_line">
+                <label for="author" class="form_label">
+                    Author
+                    <input id="author" class="form_input" name="author" type="text" value="{{book.author}}">
+                </label>
+            </div>
+            <div class="form_line">
+                <label for="year" class="form_label">
+                    Year
+                    <input id="year" class="form_input" name="year" type="number" value="{{book.year}}">
+                </label>
+            </div>
+            <div class="form_line">
+                <label for="cover" class="form_label">
+                    Cover
+                    <input id="cover" class="radio_input" type="radio" name="cover" value="hard" {{#if (checkHard book)}}checked{{/if}}>Hard
+                    <input id="cover" class="radio_input" type="radio" name="cover" value="soft" {{#if (checkSoft book)}}checked{{/if}}>Soft
+                </label>
+            </div>
+            <div class="form_line">
+                <label for="isReading" class="form_label">
+                    Is reading
+                    <input id="isReading" name="isReading" type="checkbox" {{#if (checkRead book)}}checked{{/if}}>
+                </label>
+            </div>
+
+            <input type="submit" value="Save">
+        </form>
+    </div>
+</div>

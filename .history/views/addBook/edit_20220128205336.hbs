@@ -1,0 +1,36 @@
+<h2>You can add a new book here</h2>
+<form action="/add" method="POST">
+    <div>
+        <label for="title">
+            Title
+            <input id="title" name="title" type="text" value="{{book.title}}">
+        </label>
+    </div>
+    <div>
+        <label for="author">
+            Author
+            <input id="author" name="author" type="text" value="{{book.author}}">
+        </label>
+    </div>
+    <div>
+        <label for="year">
+            Year
+            <input id="year" name="year" type="number" value="{{book.year}}">
+        </label>
+    </div>
+    <div>
+        <label for="cover">
+            Cover
+            <input id="cover" type="radio" name="cover" value="hard" {{#if (coverHard book)}}checked="checked"{{/if}}>Hard
+            <input id="cover" type="radio" name="cover" value="soft">Soft
+        </label>
+    </div>
+    <div>
+        <label for="isReading">
+            Is reading
+            <input id="isReading" name="isReading" type="checkbox">
+        </label>
+    </div>
+
+    <input type="submit" value="Add">
+</form>

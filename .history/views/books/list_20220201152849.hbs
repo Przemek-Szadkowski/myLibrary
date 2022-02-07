@@ -1,0 +1,11 @@
+<div class="books_wrapper">
+    <h2 class="books_wrapper__title">My books</h2>
+    <ul class="books_wrapper__books">
+        {{#each books}}
+            <li class="books__wrapper__book">"{{this.title}}" / {{this.author}} / {{this.year}} / cover: {{this.cover}}
+                <a href="/book/{{this.id}}" class="edit_book">< Edit</a>
+                <form method="POST" action="/book/{{this.id}}?_method=DELETE"><button type="submit" class="delete_book">Delete</button></form>
+            </li>
+        {{/each}}
+    </ul>
+</div>

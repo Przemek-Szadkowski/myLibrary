@@ -1,0 +1,11 @@
+<h2>My books</h2>
+<ul>
+    {{#each books}}
+    <form action="">
+        <li>"{{this.title}}" {{this.author}}
+            <a href="/books/{{this.id}}">Edit</a>
+            <input type="submit" value="delete">
+        </li>
+    </form>
+    {{/each}}
+</ul>

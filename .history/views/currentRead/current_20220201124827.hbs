@@ -1,0 +1,22 @@
+<div class="wrapper">
+        <div class="background__left"></div>
+        <div class="recentBooks">
+            <div class="recentBooks__title">
+                <h2 class="recentBooks__title__reading">Now I'm reading...</h2>
+            </div>
+            <div class="recentBooks__books">
+                {{#each readingBooks}}
+                    <div class="recentBooks__books__book">
+                        <div class="recentBooks__books__book__line book__year">
+                            <p class="recentBooks__books__book__line">{{this.year}}</p>
+                        </div>
+                        <p class="recentBooks__books__book__line">{{this.title}}</p>
+                        <p class="recentBooks__books__book__line">{{this.author}}</p>
+                        <div class="recentBooks__books__book__line book__cover">
+                            <p class="recentBooks__books__book__line">cover: {{this.cover}}</p>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+</div>

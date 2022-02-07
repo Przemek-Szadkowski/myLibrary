@@ -1,0 +1,13 @@
+<div class="wrapper">
+        <div class="background"></div>
+        <div class="recentBooks">
+            <div>
+                <h2 class="reading">Now I'm reading...</h2>
+            </div>
+            <div>
+{{#each readingBooks}}
+                    <li>{{this.title}} {{this.author}}</li>
+                {{/each}}
+            </div>
+        </div>
+</div>
