@@ -1,6 +1,5 @@
 const { Router } = require("express");
 const { BookRecord } = require("../records/book.record");
-const { NotFoundError } = require("../utils/error");
 
 const booksRouter = Router();
 
